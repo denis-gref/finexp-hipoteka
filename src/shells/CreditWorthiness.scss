@@ -1,0 +1,71 @@
+.creditWorthiness {
+    width: 100%;
+    background-image: url(../assets/img/creditWorthiness.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .creditWorthiness-content {
+        max-width: 664px;
+        margin: 0 auto;
+        padding: 72px 0px 72px 0px;
+
+        .creditWorthiness-capture {
+            text-align: center;
+            max-width: 502px;
+            margin: 0 auto;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            padding: 0px 0px 40px 0px;
+        }
+
+        .creditWorthiness-capture span {
+            color: #34A573;
+        }
+
+        .creditWorthiness-buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .vidget-link {
+                width: 320px;
+                padding: 13px 0px 13px 0px;
+                background-color: #34A573;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+                border-radius: 15px;
+            }
+            .vidget-link-img{
+                display:block;
+                padding: 4px 6px 0px 0px;
+                
+        }
+
+        }
+
+        .creditWorthiness-buttons a {
+            text-decoration: none;
+        }
+        @media (max-width:600px) {
+            .creditWorthiness-buttons{
+                width: calc(100% - 40px);
+                flex-direction: column;
+                margin: 0 auto;
+            }
+            .creditWorthiness-buttons a{
+                margin-bottom: 20px;
+                
+            }
+        }
+    }
+}

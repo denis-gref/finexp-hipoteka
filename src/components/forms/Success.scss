@@ -1,0 +1,50 @@
+.success {
+    width: 100%;
+
+    .success-content {
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 40px 0px 75px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .success-img {
+            padding: 0px 0px 20px 0px;
+        }
+
+        .success-img img {
+            display: block;
+            width: 100%;
+        }
+
+        .success-capture {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            padding: 0px 0px 10px 0px;
+        }
+
+        .success-description {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            padding: 0px 0px 20px 0px;
+        }
+        .link-go-back{
+            width: 70%;
+padding: 15px 90px;
+border-radius: 15px;
+background-color:#34A573 ;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%;
+cursor: pointer;
+text-align: center;
+        }
+    }
+}

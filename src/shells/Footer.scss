@@ -1,0 +1,93 @@
+.footer {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    background-color: #282828;
+    color: #fff;
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 70px 0px 70px 0px;
+
+        .footer-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 0px 0px 40px 0px;
+        }
+
+        .footer-top-content ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .footer-top-content li {
+            list-style: none;
+            padding: 0px 0px 10px 0px;
+        }
+        .footer-top-content li a:hover{
+            color: #34A573;
+        }
+        .footer-top-content a {
+            text-decoration: none;
+            color: #fff;
+            
+        }
+        .footer-adress{
+            width: 194px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            .top{
+            padding: 0px 0px 20px 0px;
+            }
+            .bottom{
+                .mail-link {
+                    padding-top: 10px;
+                }
+            }
+            .bottom a:hover {
+                color: #34A573;
+            }
+            
+        }
+        .footer-bottom{
+            padding: 6px 0px 0px 0px ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-bottom a{
+            text-decoration: none;
+            color: #fff;
+
+        }
+        .footer-bottom a:hover{
+            color: #34A573;
+        }
+    }
+    @media (max-width:1224px) {
+        .footer-content{
+            width: calc(100% - 40px);
+        }
+    }
+   
+}
+@media (max-width:600px) {
+    .footer{
+        border-radius: 0px;
+        .footer-content{
+            .footer-top-content{
+                flex-direction: column;
+            }
+            .footer-top-content a{
+                padding: 0px 0px 30px 0px;
+            }
+            .footer-nav{
+                padding: 0px 0px 30px 0px;
+            }
+        }
+    }
+}

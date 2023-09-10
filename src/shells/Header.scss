@@ -1,0 +1,49 @@
+.header{
+    max-width: 1440px;
+    width: 100vw;
+    background-color:#282828 ;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    border-radius: 0px 0px 15px 15px;
+    color: #fff;
+    .header-content{
+        position: relative;
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            padding: 6px 0px 0px 120px;
+        }
+        .header-consultation-card{
+            height: 100%;
+            width: 317px;
+            border-radius: 0px 0px 12px 0px;
+            background: rgba(52, 165, 115, 0.70);
+            .header-card-content{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 21px;
+                .header-card-text{
+                    font-size: 16px;
+                   
+                }
+                .header-card-phone{
+                    padding: 10px 0px 0px 0px;
+                }
+                .header-card-phone a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1000px) {
+    .header{
+        display: none;
+    }
+}

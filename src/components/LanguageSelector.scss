@@ -1,0 +1,41 @@
+.language-wrapper{
+    position: relative;
+    .current-language{
+        display: flex;
+        align-items: center;
+        .language-button {
+            background: rgba(28, 28, 28, 0);
+            color: #ffff;
+            border: 0;
+            font-size: 13px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+    .button-group.button-group{
+        position: absolute;
+        left: 10px;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(40, 40, 40, 1);
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        padding: 10px;
+        color: #ffff;
+    }
+}
+
+
+.language-button:hover{
+    color:rgba(52, 165, 115, 1)
+
+}
+.language-wrapper a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px 0px 20px;
+}

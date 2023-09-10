@@ -1,0 +1,178 @@
+.contact-form {
+    width: 100%;
+
+    .red {
+        box-shadow: 0px 1px 11px #f03535a1;
+    }
+
+    .form-input {
+        width: 96%;
+
+    }
+
+    .phone-number-input {
+        width: 100%;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    .form-button button {
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        padding: 15px 0px 15px 0px;
+        border-radius: 15px;
+        background-color: #34A573;
+        cursor: pointer;
+    }
+
+    .phone-number-input input {
+        background: transparent;
+        border-style: solid;
+        padding-left: 18px;
+        margin-bottom: 20px;
+        width: calc(100% - 19px);
+        border: 1px solid #BBBBBB;
+        outline: none;
+        height: 52px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: var(--font-lato);
+        font-style: normal;
+        line-height: 19.2px;
+        color: rgba(255, 255, 255, 1);
+
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .form-input input {
+        background-color: #282828;
+        width: 100%;
+        border: 1px solid #BBBBBB;
+        border-radius: 15px;
+        height: 54px;
+        margin-bottom: 16px;
+        outline: none;
+        padding-left: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+    }
+
+    .form-input-tel {
+        width: 92%;
+
+        .tel-wrapper {
+            width: 100%;
+
+            .input-mask {
+                border: 1px solid #BBBBBB;
+            }
+
+            .phone-wrapper {}
+        }
+    }
+
+    .phone-wrapper {
+        background-color: #fff;
+        width: 96.4%;
+        display: flex;
+        align-items: center;
+        border: 1px solid #BBBBBB;
+        border-radius: 10px;
+        height: 54px;
+        margin-bottom: 16px;
+        outline: none;
+        padding-left: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        outline: none;
+    }
+
+    .phone-wrapper input {
+        border: none;
+        font-size: 18px;
+        line-height: 22px;
+        outline: none;
+        border: none;
+    }
+
+    input::placeholder {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #BBBBBB;
+
+    }
+
+    .form-bottom {
+        display: flex;
+
+        .checkbox {
+            width: 15px;
+            height: 15px;
+        }
+
+        .form-description {
+            max-width: 538px;
+            padding: 2px 0px 20px 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+        }
+    }
+
+    .contact-button {
+        width: 100%;
+        background: #D30D1E;
+        border-radius: 10px;
+        height: 56px;
+    }
+
+    .contact-button button {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width:533px) {
+    .contact-form {
+        width: 94%;
+        margin: 0 auto;
+
+        .phone-wrapper {
+            width: 96.4%;
+        }
+    }
+
+}
+
+@media (max-width:428px) {
+    .contact-form {
+        .phone-wrapper {
+            width: 94.4%;
+        }
+
+        .contact-button {
+            width: 100%;
+        }
+
+        .form-input {
+            width: 94%;
+        }
+    }
+}

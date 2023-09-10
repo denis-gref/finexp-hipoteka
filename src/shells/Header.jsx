@@ -3,7 +3,7 @@ import './Header.scss';
 import HeaderLogo from '../assets/img/HeaderLogo.svg';
 import HeaderNav from '../components/HeaderNav';
 import LanguageSelector from '../components/LanguageSelector';
-import girlImg from '../assets/img/consultationGirl.png';
+import girlImg from '../assets/img/consultationGirl.svg';
 import { whitelists } from '../i18n';
 import { Link, useMatch } from 'react-router-dom';
 import HeaderMob from '../components/HeaderMob';

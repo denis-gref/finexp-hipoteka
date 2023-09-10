@@ -6,7 +6,7 @@ import OutsideHook from './OutsideHook';
 import { useState, useEffect } from "react";
 import close from '../assets/img/mobClose.svg';
 import ImgBouhalteria from '../assets/img/mobBuh.svg';
-import girl from '../assets/img/consultationGirl.png';
+import girl from '../assets/img/consultationGirl.svg';
 import { HashLink } from 'react-router-hash-link';
 import { Link, useLocation, useMatch } from 'react-router-dom';
 import { generateLanguage } from '../i18n';

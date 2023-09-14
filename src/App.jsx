@@ -12,7 +12,7 @@ import Success from './components/forms/Success';
 import FormFail from './components/forms/FormFail';
 import CreditWorthinessPage from './pages/CreditWorthinessPage';
 import SaveCredit from './pages/SaveCredit';
-import {Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import NotFoundPage from './pages/NotFoundPage';
 import { useTranslation } from "react-i18next";
 import './i18n';
@@ -21,9 +21,9 @@ import './i18n';
 function App() {
 
   const { t, i18n } = useTranslation();
-  
+
   const changeLanguages = (language) => {
-   
+
     i18n.changeLanguage(language);
   };
 
@@ -47,12 +47,15 @@ function App() {
   }
   const handlerSelectModal = () => {
     setModalActive(!modalActive);
-   
+
   };
 
   const closeModal = () => {
     setModalActive(false)
   };
+  const defaulModalHandler = () => {
+    setCurrentModalContent(modalContentForm)
+  }
 
 
   let modalContent; //= <PopUpForm child ={ <Form  handlerSelectModal={handlerSelectModal} onFormSuccessSubmit={onFormSuccess} onFormFailSubmit={onFormFail}/>}/>;
@@ -64,53 +67,53 @@ function App() {
     case modalContentFail:
       modalContent = <PopUpForm child={
         <FormFail t={t}
+          defaulModalHandler={defaulModalHandler}
           handlerSelectModal={handlerSelectModal}
-          onFormSuccessSubmit={onFormSuccess}
-          onFormFailSubmit={onFormFail} />} />;
+        />} />;
       break;
     case modalContentSuccess:
       modalContent = <PopUpForm child={
         <Success t={t}
-          closeModal={closeModal}
+          defaulModalHandler={defaulModalHandler}
           handlerSelectModal={handlerSelectModal}
-          onFormSuccessSubmit={onFormSuccess}
-          onFormFailSubmit={onFormFail} />} />;
+        />} />;
       break;
     default:
       modalContent = <PopUpForm child={
         <Form t={t}
           handlerSelectModal={handlerSelectModal}
           onFormSuccessSubmit={onFormSuccess}
-          onFormFailSubmit={onFormFail} />} />;
+          onFormFailSubmit={onFormFail}
+        />} />;
   }
 
   return (
     <HelmetProvider>
-       <div className="App">
-       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Hipoteka</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
-      <Routes>
-        <Route path='/:lang?' element={<Layout t={t} changeLanguages={changeLanguages} />}>
-          <Route index element={<HomePage t={t} handlerSelectModal={handlerSelectModal} />} />
-          <Route path='privacy' element={<Privacy />}></Route>
-          <Route path='CreditWorthinessPage' element={<CreditWorthinessPage t={t} />}></Route>
-          <Route path='SaveCredit' element={<SaveCredit t={t} />}></Route>
-          <Route path='*' element={<NotFoundPage t={t}/>}/>
-        </Route>
-      </Routes>
-      <Modal setActive={handlerSelectModal} active={modalActive} handlerSelectModal={
-        () => {
-          closeModal();
-          setCurrentModalContent(modalContentForm)
-        }}>
-        {modalContent}
-      </Modal>
-    </div>
+      <div className="App">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Hipoteka</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
+        <Routes>
+          <Route path='/:lang?' element={<Layout t={t} changeLanguages={changeLanguages} />}>
+            <Route index element={<HomePage t={t} handlerSelectModal={handlerSelectModal} onFormSuccessSubmit={onFormSuccess} onFormFailSubmit={onFormFail} />} />
+            <Route path='privacy' element={<Privacy />}></Route>
+            <Route path='CreditWorthinessPage' element={<CreditWorthinessPage t={t} />}></Route>
+            <Route path='SaveCredit' element={<SaveCredit t={t} />}></Route>
+            <Route path='*' element={<NotFoundPage t={t} />} />
+          </Route>
+        </Routes>
+        <Modal setActive={handlerSelectModal} active={modalActive} handlerSelectModal={
+          () => {
+            closeModal();
+            setCurrentModalContent(modalContentForm)
+          }}>
+          {modalContent}
+        </Modal>
+      </div>
     </HelmetProvider>
-   
+
   );
 }
 

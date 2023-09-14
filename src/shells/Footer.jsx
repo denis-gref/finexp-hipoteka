@@ -13,12 +13,13 @@ function Footer(props) {
   let lang = match && match.params ? (whitelists.includes(match.params.lang) ? match.params.lang : null) : null;
 
   const privacyLink = lang ? `/${lang}/privacy` : '/privacy'; 
+  const homeLink = lang ? `/${lang}` : 'ru'; 
 
   return (
     <div className="footer">
       <div className="footer-content">
         <div className="footer-top-content">
-          <Link to='/'>
+          <Link to={homeLink}>
             <img src={FooterLogo} alt="header logo" />
           </Link>
           <div className="footer-nav">

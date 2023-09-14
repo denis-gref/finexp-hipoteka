@@ -23,7 +23,8 @@ function HeaderMob(props) {
     let lang = match && match.params ?
         (whitelists.includes(match.params.lang) ? match.params.lang : null) : null;
 
-
+        const homeLink = lang ? `/${lang}` : 'ru';
+        
     const disolayLang = lang ? lang : 'ru';
 
     const [currentLanguage, setCurrentLanguage] = useState(disolayLang.toLocaleUpperCase());
@@ -56,9 +57,9 @@ function HeaderMob(props) {
     return (
         <div className="header-mob" ref={ref}>
             <div className="header-mob-content">
-                <div className="header-mob-img" >
+                <Link to={homeLink} className="header-mob-img" >
                     <img src={HeaderMobLogo} alt="mob-logo" />
-                </div>
+                </Link>
                 <div className="burger-menu" onClick={() => {
                     dropMenu();
                 }}>

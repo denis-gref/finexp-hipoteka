@@ -10,11 +10,11 @@ function HomePage(props) {
     return (
 
         <>
-            <Hero t={props.t} handlerSelectModal={props.handlerSelectModal}/>
+            <Hero t={props.t} handlerSelectModal={props.handlerSelectModal} onFormSuccessSubmit={props.onFormSuccess} onFormFailSubmit={props.onFormFail}/>
             <CreditWorthiness t={props.t}/>
             <About t={props.t}/>
             <Advantages t={props.t}/>
-            <Offer t={props.t} handlerSelectModal={props.handlerSelectModal} />
+            <Offer t={props.t} handlerSelectModal={props.handlerSelectModal} onFormSuccessSubmit={props.onFormSuccess} onFormFailSubmit={props.onFormFail} />
         </>
     );
 }

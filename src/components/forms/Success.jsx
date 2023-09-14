@@ -17,7 +17,10 @@ function Success(props) {
         <div className="success-description">
         {props.t("success_form_description")}
         </div>
-          <div className="link-go-back" onClick={() => props.closeModal()}>
+          <div className="link-go-back" onClick={() => {
+            props.handlerSelectModal();
+            props.defaulModalHandler();
+            }}>
           {props.t("success_form_link")}
           </div>
       </div>

@@ -40,7 +40,7 @@ function Form({ t,textButton, buttonWidth, onFormSuccessSubmit, onFormFailSubmit
             return prev;
         });
     };*/
-    const [phoneValue, setPhoneValue] = useState('');
+    /*const [phoneValue, setPhoneValue] = useState('');
     const setPhoneHandler = (value) => {
         setPhoneValue((prev) => {
             prev = value;
@@ -49,7 +49,7 @@ function Form({ t,textButton, buttonWidth, onFormSuccessSubmit, onFormFailSubmit
             } else setTelError('')
             return prev;
         });
-    };
+    };*/
 
     const [surnameValue, setSurnameValue] = useState('');
     const setSurnameHandler = (event) => {
@@ -68,6 +68,7 @@ function Form({ t,textButton, buttonWidth, onFormSuccessSubmit, onFormFailSubmit
     const setPhoneNumberStateHandler = (event) => {
         setPhoneNumberFieldState((prev) => {
             prev = event.target.value;
+            console.log(prev)
             return prev;
         });
     };
@@ -80,6 +81,12 @@ function Form({ t,textButton, buttonWidth, onFormSuccessSubmit, onFormFailSubmit
         }
     }, [nameError, name.length, telError]);
 
+    const cleanValues = (name,surname,tel) => {
+        name('');
+        surname('');
+        tel('');
+    }
+
 
     const onClickSendButtonHandler = () => {
         if (!consent) {
@@ -88,12 +95,26 @@ function Form({ t,textButton, buttonWidth, onFormSuccessSubmit, onFormFailSubmit
         if (formValid && consent) {
             console.log('ok');
             try {
-                // axios.get(`https://3k6xhpvbf6.execute-api.eu-west-2.amazonaws.com/default/asariProxy?name=${name}&phone=${phoneValue}&viberPhone=${phoneViberValue}&email=${mail}`);
+                axios.post("https://biznesexpert.bitrix24.pl/rest/2237/qpmtdmxaymh3sd39/crm.lead.add.json", {
+                  fields: {
+                    "TITLE": "hipoteka.finexp.pl  | Contact Form",
+                    "ASSIGNED_BY_ID": 8561,
+                    "SOURCE_ID": "UC_44O805",
+                    "NAME": name,
+                    "LAST_NAME": surnameValue,
+                    "STATUS_ID": "NEW",
+                    "OPENED": "Y",
+                    "PHONE": [{ "VALUE": phoneNumberFieldState, "VALUE_TYPE": "WORK" }],
+                  }
+                }).then(() => {
+                cleanValues(setName,setSurnameValue,setPhoneNumberFieldState);
+                onToggleCheck();
                 onFormSuccessSubmit();
-            } catch (error) {
-                console.error('Failed to create lead:', error);
-                onFormFailSubmit();
             }
+                );
+              } catch (e) {
+                console.log(e);
+              }
         } else console.log("????")
     }
     return (

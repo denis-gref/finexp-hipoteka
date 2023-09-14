@@ -8,7 +8,7 @@ import close from '../assets/img/mobClose.svg';
 import ImgBouhalteria from '../assets/img/mobBuh.svg';
 import girl from '../assets/img/consultationGirl.svg';
 import { HashLink } from 'react-router-hash-link';
-import { Link, useLocation, useMatch } from 'react-router-dom';
+import { Link, useLocation, useMatch,NavLink} from 'react-router-dom';
 import { generateLanguage } from '../i18n';
 import { whitelists } from '../i18n';
 
@@ -73,7 +73,7 @@ function HeaderMob(props) {
                     </div>
                     <div className="header-mob-nav">
                         <ul>
-                            <li><a href="https://www.finexp.pl/" target='blank'><img src={ImgBouhalteria} alt='logo'></img> {props.t("header_nav1")}</a></li>
+                            <li><NavLink href="https://www.finexp.pl/" target='_blank'><img src={ImgBouhalteria} alt='logo'></img> {props.t("header_nav1")}</NavLink></li>
                             <li><HashLink to='/#calculators' smooth>Калькуляторы</HashLink></li>
                             <li><HashLink to='/#about' smooth>О нас</HashLink></li>
                             <li><HashLink to='/#advantages' smooth>Преимущества</HashLink></li>

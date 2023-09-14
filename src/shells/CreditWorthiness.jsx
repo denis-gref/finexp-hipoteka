@@ -3,7 +3,7 @@ import './CreditWorthiness.scss';
 import speed from '../assets/img/speed.svg';
 import calc from "../assets/img/calc.svg";
 import { whitelists } from '../i18n';
-import { Link, useMatch } from 'react-router-dom';
+import { NavLink, useMatch } from 'react-router-dom';
 
 function CreditWorthiness(props) {
   const match = useMatch('/:lang/*');
@@ -22,7 +22,7 @@ function CreditWorthiness(props) {
         </div>
         <div  className="creditWorthiness-buttons">
 
-          <Link to={creditWorthinessPageLink} target='blank'>
+          <NavLink to={creditWorthinessPageLink} target='_blank'>
             <div className="vidget-link">
               <div className="vidget-link-img">
                 <img src={speed} alt="speed" />
@@ -30,8 +30,8 @@ function CreditWorthiness(props) {
               <div className="vidget-link-text">
               {props.t( "creditWorthiness_button_CreditWorthiness")}
               </div>
-            </div></Link>
-          <Link to={saveCredit}  target='blank'>
+            </div></NavLink>
+          <NavLink to={saveCredit}  target='_blank'>
             <div className="vidget-link">
               <div className="vidget-link-img">
                 <img src={calc} alt="speed" />
@@ -40,7 +40,7 @@ function CreditWorthiness(props) {
               {props.t( "creditWorthiness_button_save_credit")}
               </div>
             </div>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>

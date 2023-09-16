@@ -1,5 +1,5 @@
 .offer {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 100px 0px 160px 0px ;
     .offer-content {
@@ -51,6 +51,16 @@
             }
             .offer-button button{
                 margin:  0 auto;
+            }
+        }
+    }
+    @media (max-width:460px) {
+        .offer-content{
+
+            .offer-text-content{
+                .offer-capture{
+                    font-size: 30px;
+                }
             }
         }
     }

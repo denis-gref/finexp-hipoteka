@@ -13,4 +13,12 @@
         color: #fff;
         padding: 0px 0px 56px 0px;
     }
+    @media (max-width:600px) {
+        .saveCredit-capture{
+            font-size: 34px;
+        }
+    }
+}
+.saveCredit p:last-child{
+    display: none;
 }

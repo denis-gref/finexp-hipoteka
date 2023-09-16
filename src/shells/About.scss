@@ -1,5 +1,5 @@
 .about {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 
     .about-content {
@@ -92,6 +92,16 @@
                 }
             }
             
+        }
+    }
+    @media (max-width:460px) {
+        .about-content{
+            padding: 60px 0px 0px 0px;
+            .about-text-content{
+                .about-capture {
+                    font-size: 30px;
+                }
+            }
         }
     }
 }

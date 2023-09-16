@@ -14,4 +14,12 @@
         color: #fff;
         padding: 0px 0px 56px 0px;
     }
+    @media (max-width:600px) {
+        .creditWorthines-capture{
+            font-size: 34px;
+        }
+    }
+}
+.creditWorthines p:last-child{
+    display: none;
 }

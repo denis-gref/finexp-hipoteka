@@ -26,7 +26,11 @@ function Header(props) {
             </Link>
           </div>
           <HeaderNav t={props.t} />
-          <LanguageSelector onLanguageChange={(lange)=>props.changeLanguages(lange)} />
+          <div className='header-language-and-consultation' >
+            <div className="selector-wrapper">
+            <LanguageSelector onLanguageChange={(lange)=>props.changeLanguages(lange)} />
+            </div>
+          
           <div className="header-consultation-card">
             <div className="header-card-content">
               <div className="header-card-img">
@@ -42,6 +46,8 @@ function Header(props) {
               </div>
             </div>
           </div>
+          </div>
+          
         </div>
 
       </div>

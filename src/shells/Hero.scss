@@ -1,5 +1,5 @@
 .hero {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 
     .hero-content {
@@ -15,7 +15,7 @@
             margin: 0 auto;
 
             .hero-capture {
-                font-size: 50px;
+                font-size: 46px;
                 font-style: normal;
                 font-weight: 700;
                 padding: 0px 0px 20px 0px;
@@ -60,7 +60,13 @@
                 .hero-button button{
                     margin:  0 auto;
                 }
+                @media (max-width:460px) {
+                    .hero-capture{
+                        font-size: 30px;
+                    }
+                }
             }
         }
     }
+    
 }

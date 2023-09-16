@@ -1,5 +1,5 @@
 .header{
-    max-width: 1440px;
+    
     width: 100vw;
     background-color:#282828 ;
     position: fixed;
@@ -14,6 +14,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .header-language-and-consultation{
+            display: flex;
+            align-items: center;
+            .selector-wrapper{
+                padding: 0px 20px 0px 0px;
+            }
+        }
         .logo{
             padding: 6px 0px 0px 120px;
         }

@@ -16,6 +16,15 @@
             flex-wrap: wrap;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             padding: 0px 0px 40px 0px;
+            .links-and-logo-wrapper{
+                .social-links-wrapper{
+                    padding: 20px 0px 20px 0px;
+                    width: 150px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
         }
 
         .footer-top-content ul {
@@ -41,11 +50,11 @@
             font-style: normal;
             font-weight: 400;
             .top{
-            padding: 0px 0px 20px 0px;
+            padding: 0px 0px 0px 0px;
             }
             .bottom{
                 .mail-link {
-                    padding-top: 10px;
+                    padding-top: 0px;
                 }
             }
             .bottom a:hover {

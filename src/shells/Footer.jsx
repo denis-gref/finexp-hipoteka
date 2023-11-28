@@ -72,7 +72,7 @@ function Footer(props) {
               NIP: 8971906842
             </div>
             <div className="bottom">
-              <div className="tel"><a href='tel: +48 511 743 822'> +48 511 743 822</a></div>
+              <div className="tel"><a href='tel: +48 718 808 802'> +48 718 808 802</a></div>
               <div className='mail-link'><a href="mailto:hipoteka@finexp.pl">hipoteka@finexp.pl</a></div>
             </div>
           </div>

@@ -41,7 +41,7 @@ function Header(props) {
                   {props.t("header_consultation")}
                 </div>
                 <div className="header-card-phone">
-                  <a href='tel: +48 511 743 822'> +48 511 743 822</a>
+                  <a href='tel: +48 718 808 802'> +48 718 808 802</a>
                 </div>
               </div>
             </div>

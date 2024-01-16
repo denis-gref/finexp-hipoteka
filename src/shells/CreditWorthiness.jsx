@@ -12,15 +12,15 @@ function CreditWorthiness(props) {
 
   const creditWorthinessPageLink = lang ? `/${lang}/CreditWorthinessPage` : '/CreditWorthinessPage';
   const saveCredit = lang ? `/${lang}/SaveCredit` : '/SaveCredit';
-  
+
   return (
-    <div  className="creditWorthiness">
+    <div className="creditWorthiness">
       <div className="creditWorthiness-content">
         <div className="creditWorthiness-capture">
-        {props.t( "creditWorthiness_capture")}
-          <span> {props.t( "creditWorthiness_capture_span")}</span>
+          {props.t("creditWorthiness_capture")}
+          <span> {props.t("creditWorthiness_capture_span")}</span>
         </div>
-        <div  className="creditWorthiness-buttons">
+        <div className="creditWorthiness-buttons">
 
           <NavLink to={creditWorthinessPageLink} target='_blank'>
             <div className="vidget-link">
@@ -28,10 +28,10 @@ function CreditWorthiness(props) {
                 <img src={speed} alt="speed" />
               </div>
               <div className="vidget-link-text">
-              {props.t( "creditWorthiness_button_CreditWorthiness")}
+                {props.t("creditWorthiness_button_CreditWorthiness")}
               </div>
             </div></NavLink>
-          <NavLink to={saveCredit}  target='_blank'>
+          {/* <NavLink to={saveCredit}  target='_blank'>
             <div className="vidget-link">
               <div className="vidget-link-img">
                 <img src={calc} alt="speed" />
@@ -40,7 +40,7 @@ function CreditWorthiness(props) {
               {props.t( "creditWorthiness_button_save_credit")}
               </div>
             </div>
-          </NavLink>
+          </NavLink>*/}
         </div>
       </div>
     </div>
